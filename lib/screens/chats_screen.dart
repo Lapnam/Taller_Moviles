@@ -6,7 +6,6 @@ class ChatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ListView permite desplazar la lista de chats verticalmente
     return ListView(
       children: const [
         ChatTile(

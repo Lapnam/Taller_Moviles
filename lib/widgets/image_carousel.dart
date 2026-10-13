@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-// Carrusel horizontal de tarjetas (playlists recomendadas).
 class ImageCarousel extends StatelessWidget {
   const ImageCarousel({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // SizedBox fija la altura del carrusel.
-    // ListView con scrollDirection horizontal permite deslizar hacia los lados.
     return SizedBox(
       height: 170,
       child: ListView(
@@ -36,7 +33,6 @@ class ImageCarousel extends StatelessWidget {
   }
 }
 
-// Tarjeta individual del carrusel, reutilizable con parámetros.
 class CarouselCard extends StatelessWidget {
   final String title;
   final String imagePath;
@@ -52,13 +48,10 @@ class CarouselCard extends StatelessWidget {
     return Container(
       width: 140,
       margin: const EdgeInsets.only(right: 12),
-      // La Column apila: primero la imagen y debajo el título
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Imagen con bordes redondeados.
-          // Expanded hace que la imagen ocupe todo el espacio que sobra
-          // después de colocar el título.
+
           Expanded(
             child: Container(
               width: double.infinity,
@@ -73,10 +66,10 @@ class CarouselCard extends StatelessWidget {
             ),
           ),
 
-          // 2. Espacio entre la imagen y el título
+
           const SizedBox(height: 8),
 
-          // 3. Título fuera de la imagen, abajo
+
           Text(
             title,
             maxLines: 1,

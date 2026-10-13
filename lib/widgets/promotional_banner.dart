@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Widget personalizado: banner promocional del Home.
-// Recibe por parámetros el título, la descripción, la imagen y el color.
 class PromotionalBanner extends StatelessWidget {
   final String title;
   final String description;
@@ -18,11 +16,9 @@ class PromotionalBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // La Column apila: primero el título (afuera) y luego el recuadro de color
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 1. Título fuera del recuadro
         Padding(
           padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
           child: Text(
@@ -35,7 +31,7 @@ class PromotionalBanner extends StatelessWidget {
           ),
         ),
 
-        // 2. Recuadro de color con descripción, botón e imagen
+
         Container(
           margin: const EdgeInsets.all(12),
           padding: const EdgeInsets.all(16),
@@ -46,7 +42,7 @@ class PromotionalBanner extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Parte izquierda: descripción y botón, centrados
+
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -66,7 +62,7 @@ class PromotionalBanner extends StatelessWidget {
               ),
               const SizedBox(width: 12),
 
-              // Parte derecha: imagen con bordes redondeados
+
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
                 child: Image.asset(
@@ -74,7 +70,7 @@ class PromotionalBanner extends StatelessWidget {
                   width: 100,
                   height: 100,
                   fit: BoxFit.cover,
-                  // Si la imagen no carga, muestra un icono con aviso
+
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
                       width: 100,

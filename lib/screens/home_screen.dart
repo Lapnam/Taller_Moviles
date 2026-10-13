@@ -5,15 +5,11 @@ import '../widgets/image_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    // ListView permite desplazar el contenido verticalmente
     return ListView(
       children: [
         const SizedBox(height: 10),
-        // 1. Banner
-        // 2. Título de la sección del carrusel
         const Padding(          
           padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
           child: Row(
@@ -29,7 +25,6 @@ class HomeScreen extends StatelessWidget {
     ),
         ),
 
-        // 3. Carrusel horizontal
         const ImageCarousel(),
 
         const SizedBox(height: 10),
@@ -41,7 +36,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Color.fromARGB(255, 54, 44, 69),
         ),
 
-        // 4. Publicaciones
+  
         const PostCard(
           userName: 'Garz',
           description: 'Salsita pal corazon.',

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Widget personalizado: control de volumen con botones + y -.
-// Es StatefulWidget porque el valor cambia cuando el usuario toca los botones.
+
 class NumericCounter extends StatefulWidget {
   const NumericCounter({super.key});
 
@@ -10,14 +9,12 @@ class NumericCounter extends StatefulWidget {
 }
 
 class _NumericCounterState extends State<NumericCounter> {
-  // Variable de tipo int que guarda el volumen actual
   int _volume = 5;
 
-  // Límites del volumen
+
   final int _minVolume = 0;
   final int _maxVolume = 10;
 
-  // Se ejecuta al pulsar el botón "+"
   void _increase() {
     setState(() {
       if (_volume < _maxVolume) {
@@ -26,7 +23,7 @@ class _NumericCounterState extends State<NumericCounter> {
     });
   }
 
-  // Se ejecuta al pulsar el botón "-"
+
   void _decrease() {
     setState(() {
       if (_volume > _minVolume) {
@@ -54,7 +51,7 @@ class _NumericCounterState extends State<NumericCounter> {
           ),
           const SizedBox(height: 20),
 
-          // Icono que cambia si el volumen está en 0
+
           Icon(
             _volume == 0 ? Icons.volume_off : Icons.volume_up,
             size: 60,
@@ -62,7 +59,7 @@ class _NumericCounterState extends State<NumericCounter> {
           ),
           const SizedBox(height: 10),
 
-          // Valor actual de la variable
+  
           Text(
             '$_volume',
             style: const TextStyle(
@@ -73,7 +70,7 @@ class _NumericCounterState extends State<NumericCounter> {
           ),
           const SizedBox(height: 10),
 
-          // Barra que muestra el volumen de forma visual
+
           LinearProgressIndicator(
             value: _volume / _maxVolume,
             minHeight: 12,
@@ -82,7 +79,7 @@ class _NumericCounterState extends State<NumericCounter> {
           ),
           const SizedBox(height: 10),
 
-          // Mensaje cuando se llega a un límite
+  
           Text(
             _volume == _maxVolume
                 ? 'Volumen máximo'
@@ -93,7 +90,7 @@ class _NumericCounterState extends State<NumericCounter> {
           ),
           const SizedBox(height: 20),
 
-          // Botones para disminuir y aumentar
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

@@ -7,7 +7,6 @@ void main() {
   runApp(const MusicFlowApp());
 }
 
-// Widget raíz de la aplicación: define el nombre y el tema (colores).
 class MusicFlowApp extends StatelessWidget {
   const MusicFlowApp({super.key});
 
@@ -25,8 +24,6 @@ class MusicFlowApp extends StatelessWidget {
   }
 }
 
-// Pantalla principal: contiene el Scaffold, el AppBar y la barra inferior.
-// Es StatefulWidget porque debe recordar qué sección está seleccionada.
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -35,10 +32,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  // Variable que guarda la sección activa: 0 = Home, 1 = Chats, 2 = Laboratorio
   int _selectedIndex = 0;
 
-  // Devuelve el título del AppBar según la sección activa
   String _getTitle() {
     if (_selectedIndex == 0) {
       return 'MusiccisuM';
@@ -49,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
     }
   }
 
-  // Devuelve la pantalla que corresponde a la sección activa
+
   Widget _getBody() {
     if (_selectedIndex == 0) {
       return const HomeScreen();

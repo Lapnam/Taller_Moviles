@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-// Widget personalizado: representa una conversación de la lista de chats.
-// Recibe por parámetros los datos que cambian en cada conversación.
+
 class ChatTile extends StatelessWidget {
   final String name;
   final String lastMessage;
   final String time;
   final IconData avatarIcon;
   final Color avatarColor;
-  final int unreadCount; // 0 significa que no hay mensajes sin leer
+  final int unreadCount; 
 
   const ChatTile({
     super.key,
@@ -32,7 +31,6 @@ class ChatTile extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // 1. Avatar del contacto
           CircleAvatar(
             radius: 26,
             backgroundColor: avatarColor,
@@ -40,7 +38,6 @@ class ChatTile extends StatelessWidget {
           ),
           const SizedBox(width: 14),
 
-          // 2. Nombre y último mensaje (ocupan el espacio libre)
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +61,6 @@ class ChatTile extends StatelessWidget {
           ),
           const SizedBox(width: 8),
 
-          // 3. Hora e indicador de mensajes sin leer
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -73,8 +69,6 @@ class ChatTile extends StatelessWidget {
                 style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
               ),
               const SizedBox(height: 6),
-              // Si hay mensajes sin leer, muestra un círculo con el número.
-              // Si no hay, muestra un espacio vacío.
               unreadCount > 0
                   ? Container(
                       padding: const EdgeInsets.all(6),

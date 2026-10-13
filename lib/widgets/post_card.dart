@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-// Widget personalizado que representa una publicación tipo red social.
-// Es StatefulWidget porque el botón "Me gusta" cambia de estado.
 class PostCard extends StatefulWidget {
-  // Parámetros: la información que cambia en cada publicación
+
   final String userName;
   final String description;
   final IconData avatarIcon;
   final Color avatarColor;
-  final String imagePath; // Ruta de la imagen principal
+  final String imagePath; 
 
   const PostCard({
     super.key,
@@ -24,14 +22,12 @@ class PostCard extends StatefulWidget {
 }
 
 class _PostCardState extends State<PostCard> {
-  // Variable que guarda si el usuario ya dio "Me gusta"
   bool _liked = false;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      // clipBehavior recorta la imagen para respetar los bordes redondeados
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -41,7 +37,6 @@ class _PostCardState extends State<PostCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Encabezado: avatar + nombre de usuario
           Padding(
             padding: const EdgeInsets.all(12),
             child: Row(
@@ -68,7 +63,6 @@ class _PostCardState extends State<PostCard> {
             height: 200,
             width: double.infinity,
             fit: BoxFit.cover,
-            // Si la imagen no carga, muestra un icono de aviso
             errorBuilder: (context, error, stackTrace) {
               return Container(
                 height: 200,
@@ -79,7 +73,6 @@ class _PostCardState extends State<PostCard> {
             },
           ),
 
-          // 3. Botones: "Me gusta" y comentarios
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: Row(
@@ -104,7 +97,7 @@ class _PostCardState extends State<PostCard> {
             ),
           ),
 
-          // 4. Descripción breve
+
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Text(widget.description),
