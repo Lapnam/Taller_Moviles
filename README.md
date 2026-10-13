@@ -12,6 +12,20 @@ La aplicación tiene tres secciones, a las que se navega con una barra de navega
 
 Todos los datos son estáticos y están escritos directamente en el código. No se usan bases de datos, JSON, APIs ni servicios externos.
 
+## Capturas de pantalla
+
+### Home
+
+![Pantalla Home](capturas/home.png)
+
+### Chats
+
+![Pantalla Chats](capturas/chats.png)
+
+### Laboratorio de widgets
+
+![Pantalla Laboratorio de widgets](capturas/laboratorio.png)
+
 ## Estructura del proyecto
 
 ```
@@ -37,8 +51,8 @@ lib/
 ```
 2. Clonar el repositorio y entrar a la carpeta del proyecto:
 ```
-   git clone URL_DEL_REPOSITORIO
-   cd taller_moviles
+   git clone https://github.com/Lapnam/Taller_Moviles.git
+   cd Taller_Moviles
 ```
 3. Descargar las dependencias:
 ```
