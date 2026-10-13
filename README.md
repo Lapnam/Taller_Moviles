@@ -1,6 +1,6 @@
-# MusicFlow
+# Musiccisum
 
-Aplicación móvil desarrollada con **Flutter y Dart** para el Taller práctico de desarrollo móvil. Tiene temática de música e imita una red social musical sencilla.
+Aplicación móvil desarrollada con **Flutter y Dart** para el Taller de desarrollo móvil. Tiene temática de música e imita una red social musical.
 
 ## Descripción
 
